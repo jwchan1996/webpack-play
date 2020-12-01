@@ -38,7 +38,7 @@ log()
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>01-webpack-quickly-start</title>
+  <title>01-quickly-start</title>
 </head>
 <body>
   <script src="./src/index.js"></script>
