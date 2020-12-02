@@ -2,8 +2,6 @@
 
 ## webpack 核心原理
 
-![image.png](https://i.loli.net/2020/11/24/eDr9HLAJjzlO2p1.png)
-
 一个项目中会有各种各样的文件，`webpack` 会根据配置找到一个文件作为打包的入口，一般情况下这个入口都会是 `js` 文件，会顺着入口文件的代码，根据文件依赖关系，根据代码中出现的 `import` 或 `require` 语句解析推断出来该文件所依赖的资源模块，然后分别去解析每个资源模块对应的依赖，最后形成整个项目中所用到资源的依赖关系树。
 
 ![image.png](https://i.loli.net/2020/11/24/QeKXT5DVR48aHly.png)
@@ -81,9 +79,9 @@ module.exports = source => {
 }
 ```
 
-打包后，启动开发服务器，即可看到 `md` 转换的 `html` 内容。
+打包后，启动开发服务器，即可看到 `md` 转换的 `html` 内容，下面是网页显示效果。
 
-![image.png](https://i.loli.net/2020/12/02/jyoSP7dWZvDMsrE.png)
+![image.png](https://i.loli.net/2020/12/02/UBDIPtmysVCuYRg.png)
 
 ### 配合其他 Loader 工作的 Loader
 
@@ -126,3 +124,5 @@ module.exports = {
 ```
 
 打包后，也能在网页正常显示转换后的 `html` 内容。
+
+至此，我们就实现了一个简单的 Loader 啦。
