@@ -31,7 +31,7 @@ module.exports = {
 }
 ```
 
-其中 `presets` 选项可以预设需要转换的 `js` 新特性，这里 `@babel/preset-env` 是包含了所有 `ES6` 新特性转换的插件集合，默认会把所有 `ES6` 新特性转换为 `ES5。`
+其中 `presets` 选项可以预设需要转换的 `js` 代码的目标环境，这里 `@babel/preset-env` 是包含了所有 `ES6` 新特性转换的插件集合，默认会把所有 `ES6` 新特性转换为 `ES5。`
 
 `除此之外，presets` 还可以指定需要兼容的浏览器，这样 `babel-loader` 就会根据预设的 `targets` 转换出兼容浏览器版本的代码。
 
@@ -70,7 +70,7 @@ module.exports = {
 
 > 这里引申一下 output.publicPath 配置
 
-打开 `webpack.config.js` 文件，可以看到 `output` 的 `publicPath` 选项配置为了 `/dist/`。之所以这样配置，是因为本项目 `index.html` 文件与打包后的资源 `static` 目录不在同一目录下，在生产模式下资源文件加载的时候需要拼接 `dist` 目录才能找到 `static` 下的资源。
+打开 `webpack.config.js` 文件，可以看到 `output` 的 `publicPath` 选项配置为了 `dist/`。之所以这样配置，是因为本项目 `index.html` 文件与打包后的资源 `static` 目录不在同一目录下，在生产模式下资源文件加载的时候需要拼接 `dist` 目录才能找到 `static` 下的资源。
 
 ```javascript
 // webpack.config.js
@@ -78,7 +78,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, 'dist'),
-    publicPath: '/dist/'  
+    publicPath: 'dist/'  
   }
 }
 ```
@@ -103,7 +103,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   max-width: 800px;
-  background-image: url(/dist/static/img/bg-67a8da92.png);
+  background-image: url(./dist/static/img/bg-67a8da92.png);
 }
 ```
 
