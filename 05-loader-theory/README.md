@@ -58,12 +58,12 @@ module.exports = {
 (()=>{var r={714:r=>{r.exports="# Loader 加载器机制\r\n\r\n## webpack 核心原理\r\n\r\n一个项目中会有各种各样的文件，`webpack` 会根据配置找到一个文件作为打包的入口，一般情况下这个入口都会是 `js` 文件，会顺着入口文件的代码，根据文件依赖关系，根据代码中出现的 `import` 或 `require` 语句解析推断出来该文件所依赖的资源模块，然后分别去解析每个资源模块对应的依赖，最后形成整个项目中所用到资源的依赖关系树。"}},e={};function t(n){if(e[n])return e[n].exports;var o=e[n]={exports:{}};return r[n](o,o.exports,t),o.exports}t.n=r=>{var e=r&&r.__esModule?()=>r.default:()=>r;return t.d(e,{a:e}),e},t.d=(r,e)=>{for(var n in e)t.o(e,n)&&!t.o(r,n)&&Object.defineProperty(r,n,{enumerable:!0,get:e[n]})},t.o=(r,e)=>Object.prototype.hasOwnProperty.call(r,e),(()=>{"use strict";var r=t(714),e=t.n(r);document.write(e())})()})();
 ```
 
-此时直接运行 `serve` 启动开发服务器，打开页面显然无法达到我们想要的效果，因为代码根本还没转成 `html。`
+此时直接运行 `serve` 启动开发服务器，打开页面显然无法达到我们想要的效果，因为代码根本还没转成 `html`。
 
 `webpack` 中 `Loader` 的工作身份有两种类型：
 
-- 第一种是独立工作的，
-- 第二种是需要配合其他 `Loader` 进行工作，
+- 第一种是独立工作的，返回的是一段 `js` 代码
+- 第二种是需要配合其他 `Loader` 进行工作，返回一段字符串交给下一个 `Loader` 处理
 
 ### 独立工作的 Loader
 
@@ -125,4 +125,4 @@ module.exports = {
 
 打包后，也能在网页正常显示转换后的 `html` 内容。
 
-至此，我们就实现了一个简单的 Loader 啦。
+至此，我们就实现了一个简单的 `Loader` 啦。
