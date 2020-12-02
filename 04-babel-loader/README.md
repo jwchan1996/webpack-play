@@ -64,6 +64,8 @@ module.exports = {
 }
 ```
 
+还可以使用 .babelrc、babel.config.js 等文件配置方式进行配置，具体使用方法参考[官网](https://www.babeljs.cn/docs/7.2.0/configuration)。
+
 配置好后，运行打包命令 `yarn build`，即可在打包结果看到 `ES6` 代码全部被转换为 `ES5` 代码。
 
 > 这里引申一下 output.publicPath 配置
