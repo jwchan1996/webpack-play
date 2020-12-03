@@ -213,5 +213,6 @@ plugins: [
     ]
   })
 ]
+```
 
 > webpack 提供的 ProgressPlugin 插件可以实时输出 webpack 的打包进度，用法是 new webpack.ProgressPlugin()
