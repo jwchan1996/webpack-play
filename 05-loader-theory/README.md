@@ -14,9 +14,9 @@
 
 `webpack` 中处理资源加载的 `Loader` 会形成一个管道，不管使用多少个 `Loader` 处理资源，最终要求的是 `Loader` 要返回一段 `js` 代码。
 
-下面尝试写一个处理 `markdown` 文件的 `loader，实现读取` md 内容并转换为 `html` 显示在网页。在根目录下新建 `markdown-loader.js` 文件。
+下面尝试写一个处理 `markdown` 文件的 `Loader`，实现读取 `md` 内容并转换为 `html` 显示在网页。在根目录下新建 `markdown-loader.js` 文件。
 
-`Loader` 加载器导出的是一个函数，函数接收处理的资源内容为参数。这里使用 `JSON.stringify()` 方法对 md 资源内容进行字符串转移，避免 `js` 加载时发生歧义从而报错。
+`Loader` 加载器导出的是一个函数，函数接收处理的资源内容为参数。这里使用 `JSON.stringify()` 方法对 `md` 资源内容进行字符串转移，避免 `js` 加载时发生歧义从而报错。
 
 ```javascript
 // markdown-loader.js
