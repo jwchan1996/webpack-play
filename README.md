@@ -12,12 +12,12 @@
 
 ## 系列文章
 
-[快速上手](/01-quickly-start/)
-[配置文件](/02-configuration/)
-[资源模块加载](/03-asset-load/)
-[处理 ES6 代码](/04-babel-loader/)
-[Loader 加载器机制](/05-loader-theory/)
-[webpack 常用插件](/06-generally-used-plugins/)
-[Plugin 插件机制](/07-plugin-theory/)
+[快速上手](/01-quickly-start/)  
+[配置文件](/02-configuration/)  
+[资源模块加载](/03-asset-load/)  
+[处理 ES6 代码](/04-babel-loader/)  
+[Loader 加载器机制](/05-loader-theory/)  
+[webpack 常用插件](/06-generally-used-plugins/)  
+[Plugin 插件机制](/07-plugin-theory/)  
 
 > 以此仓库记录 webpack 的使用与原理
