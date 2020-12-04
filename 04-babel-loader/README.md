@@ -48,13 +48,15 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              '@babel/preset-env',
-              {
-                'targets': {
-                  'chrome': '58',
-                  'ie': '11'
+              [
+                '@babel/preset-env',
+                {
+                  'targets': {
+                    'chrome': '58',
+                    'ie': '11'
+                  }
                 }
-              }
+              ]
             ]
           }
         }
