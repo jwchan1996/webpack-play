@@ -1,12 +1,12 @@
 # webpack-dev-server
 
-> 注：当前 webpack-dev-server 暂时不支持 webpack 5 与 webpack-cli 4，所以当前示例代码使用的是 webpack@4.x 与 webpack-cli@3.x 版本。
+> 注意：当前 webpack-dev-server 3.x 版本暂时不支持 webpack 5 与 webpack-cli 4，所以当前示例代码使用的是 webpack@4.x 与 webpack-cli@3.x 版本。
 
 ![image.png](https://i.loli.net/2020/11/24/Hq3u46h7sZkyxGi.png)
 
 一般理想的开发环境如下：
 
-- 以 `HTTP Server` 运行。项目以 `http` 服务的方式去运行，而不是以文件的形式预览。一是更接近生产环境，而是 `ajax` 不支持在文件 `file` 协议中使用。
+- 以 `HTTP Server` 运行。项目以 `http` 服务的方式去运行，而不是以文件的形式预览。一是更接近生产环境，二是 `ajax` 不支持在文件 `file` 协议中使用。
 - 自动编译、自动更新。修改源代码后，`webpack` 能够自动进行构建，浏览器及时显示最新的结果，这样能大大地减少开发中的重复操作。
 - 提供 `Source Map` 支持。代码出现错误，能够快速定位错误代码位置。
 
