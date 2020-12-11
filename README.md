@@ -20,5 +20,6 @@
 [webpack 常用插件](/06-generally-used-plugins/)  
 [Plugin 插件机制](/07-plugin-theory/)  
 [webpack-dev-server](/08-webpack-dev-server/)  
+[HMR 模块热更新](/09-webpack-hmr/)  
 
 > 以此仓库记录 webpack 的使用与原理

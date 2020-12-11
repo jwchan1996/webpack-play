@@ -1,0 +1,19 @@
+{
+  "name": "09-webpack-hmr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn webpack-dev-server",
+    "build": "yarn webpack"
+  },
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "style-loader": "^2.0.0",
+    "webpack": "4.x",
+    "webpack-cli": "3.x",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
