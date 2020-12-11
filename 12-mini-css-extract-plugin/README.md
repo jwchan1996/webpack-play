@@ -10,8 +10,6 @@ yarn add mini-css-extract-plugin --dev
 
 `MiniCssExtractPlugin` 会自动提取 `CSS` 到单个文件，`MiniCssExtractPlugin.loader` 可以使样式文件通过 `link` 方式进行引入。
 
-![image.png](https://i.loli.net/2020/11/28/NlmFX7U1OZJLi5a.png)
-
 ```javascript
 // webpack.config.js
 const webpack = require('webpack')
@@ -56,8 +54,6 @@ module.exports = {
 ```bash
 yarn add optimize-css-assets-webpack-plugin --dev
 ```
-
-![image.png](https://i.loli.net/2020/11/28/VAYL8sGRhqJ6BTr.png)
 
 ```javascript
 // webpack.config.js

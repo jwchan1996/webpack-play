@@ -14,7 +14,8 @@
 - [webpack-dev-server](/08-webpack-dev-server/)  
 - [HMR 模块热更新](/09-webpack-hmr/)  
 - [使用 Source Map](/10-webpack-source-map/)  
-- [为不同环境抽离配置](/11-merge-webpack-config/)  
+- [为不同环境抽离配置](/11-merge-webpack-config/) 
+- [提取单个 CSS 文件并压缩](/12-mini-css-extract-plugin/)   
 
 > 以此仓库记录 webpack 的使用与原理
 
