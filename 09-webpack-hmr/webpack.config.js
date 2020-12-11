@@ -8,6 +8,7 @@ module.exports = {
     filename: 'js/bundle.js'
   },
   devServer: {
+    open: true,
     hot: true,
     // hot 和 hotOnly 的区别是在热更新逻辑出错或某些模块不支持热更新的情况下，
     // 前者会自动刷新页面，后者不会刷新页面，而是在控制台输出热更新失败

@@ -1,6 +1,6 @@
 # webpack-dev-server
 
-> 注意：当前 webpack-dev-server 3.x 版本暂时不支持 webpack 5 与 webpack-cli 4，所以当前示例代码使用的是 webpack@4.x 与 webpack-cli@3.x 版本。
+> 注意：关于 webpack-cli 4.0 及以上版本和 webpack-dev-server 之间的依赖报错问题，在 webpack 官网上面可以看到安装和配置的方式没有变动，启动的命令变了，直接使用 webpack serve 命令启动。
 
 ![image.png](https://i.loli.net/2020/11/24/Hq3u46h7sZkyxGi.png)
 
@@ -41,6 +41,8 @@ yarn add webpack-dev-server --dev
 ```
 
 运行了 `webpack-dev-server` 命令后，它的内部会自动将项目进行打包并启动一个开发服务器，监听文件变化并同步浏览器页面，其中项目打包后的文件是放在内存当中的，而不是进行磁盘的读写，大大提高了开发的效率。
+
+> 注意：在 webpack 5 与 webpack-cli 4 版本以上的环境下，这里运行 webpack-dev-server 命令不再是 yarn webpack-dev-server，而是 yarn webpack serve
 
 > 运行命令时增加 --open 参数，会自动打开浏览器页面，打开项目的预览地址了。当然，也可以通过配置文件实现。
 

@@ -10,6 +10,8 @@
 yarn webpack-dev-server --hot
 ```
 
+> 注意：在 webpack 5 与 webpack-cli 4.0 以上版本，webpack-dev-server 启动命令变为 webpack serve
+
 也可以通过配合文件开启，其中开启 `HMR` 需要瞒满足链各个条件：
 
 1. 配置 devServer.hot 为 true
