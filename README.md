@@ -17,6 +17,10 @@
 - [为不同环境抽离配置](/11-merge-webpack-config/) 
 - [提取单个 CSS 文件并压缩](/12-mini-css-extract-plugin/)   
 
+## 优化配置
+
+- [webpack 优化配置之 DefinePlugin](/13-define-plugin/)   
+
 > 以此仓库记录 webpack 的使用与原理
 
 ## webpack 5 需要注意的事项
