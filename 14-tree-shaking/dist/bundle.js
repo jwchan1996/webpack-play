@@ -1,0 +1,1 @@
+(()=>{"use strict";document.body.appendChild(document.createElement("button"))})();
