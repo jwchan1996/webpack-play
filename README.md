@@ -20,6 +20,7 @@
 ## 优化配置
 
 - [webpack 优化配置之 DefinePlugin](/13-define-plugin/)   
+- [webpack 优化配置之 Tree-shaking](/14-tree-shaking/)   
 
 > 以此仓库记录 webpack 的使用与原理
 
