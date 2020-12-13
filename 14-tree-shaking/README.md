@@ -65,7 +65,7 @@ optimization: {
 
 ![image.png](https://i.loli.net/2020/11/27/1KjClBZMkY6rthO.png)
 
-如果再开启 `concatenateModules` 功能则可以合并每一个模块到一个函数中。
+还可以使用 `concatenateModules` 属性继续优化输出。普通打包结果是将每一个模块单独放到一个函数当中，如果我们的模块很多，就会出现很多这样的模块函数。开启 `concatenateModules` 功能可以尽可能地将所有模块合并输出到一个函数中。
 
 配置：
 
@@ -73,7 +73,7 @@ optimization: {
 optimization: {
   // 模块只导出被使用的成员
   usedExports: true,
-  // 尽可能合并每一个模块到一个函数中
+  // 尽可能合并所有模块到一个函数中
   concatenateModules: true,
   // 压缩输出结果
   minimize: true
@@ -87,4 +87,4 @@ optimization: {
 (()=>{"use strict";document.body.appendChild(document.createElement("button"))})();
 ```
 
-**总结**：`optimization` 对象中的 `usedExports` 负责标记【枯树叶】，`minimize` 负责【摇掉】它们。
+**总结**：`optimization` 对象中的 `usedExports` 负责标记【枯树叶】，`minimize` 负责【摇掉】它们，`concatenateModules` 能合并所有模块到一个函数中。
