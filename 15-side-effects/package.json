@@ -1,0 +1,19 @@
+{
+  "name": "15-side-effects",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn webpack"
+  },
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^5.10.2",
+    "webpack-cli": "^4.2.0"
+  },
+  "sideEffects": [
+    "./src/extend.js",
+    "*.css"
+  ]
+}
