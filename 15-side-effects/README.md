@@ -1,10 +1,10 @@
 # webpack 优化配置之 sideEffects
 
-`webpack` 新增的 `sideEffects` 新特性允许通过配置的方式去标识我们的代码是否有副作用，从而为 `tree-shaking` 提供更大的压缩空间。
+`webpack 4` 新增的 `sideEffects` 新特性允许通过配置的方式去标识我们的代码是否有副作用，从而为 `tree-shaking` 提供更大的压缩空间。
 
 **副作用**：模块执行时除了导出成员之外所做的事情。
 
-`sideEffects` 一般用于开发 `npm` 模块时标记是否有副作用。
+`sideEffects` 一般用于开发 `npm` 模块时标记模块代码是否有副作用。
 
 下面是在入口文件导入 `button` 组件模块，但是导出 `button` 组件的 `index.js` 文件还有许多其他组件模块，这样在打包时整个 `index.js` 的模块都会被打包进来。
 
@@ -22,7 +22,7 @@ import { Button } from './components'
 document.body.appendChild(Button())
 ```
 
-打包后：
+打包后可以看到没用到的 `Link` 和 `Heading` 也会打包到 `bundle` 中来。
 
 ```javascript
 // dist/bundle.js
@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 > tips：在生产模式下，webpack 会自动开启 sideEffects 功能。
 
-而 `webpack` 在打包某个模块之前，会先检查这个模块所属的 `package.json` 中的 `sideEffects` 标识，以此来判断这个模块是否有副作用，如果没有副作用的话，这些没用到的模块就不会被打包。也就是说，我们可以通过手动配置 package.json 的 `sideEffects` 选项来标识代码是否有副作用。即便这些没有用到的模块中存在一些副作用代码，我们也可以通过 `package.json` 中的 `sideEffects` 去强制声明没有副作用。
+而 `webpack` 在打包某个模块之前，会先检查这个模块所属的 `package.json` 中的 `sideEffects` 标识，以此来判断这个模块是否有副作用，如果没有副作用的话，这些没用到的模块就不会被打包。也就是说，我们可以通过手动配置 `package.json` 的 `sideEffects` 选项来标识代码是否有副作用。即便这些没有用到的模块中存在一些副作用代码，我们也可以通过 `package.json` 中的 `sideEffects` 去强制声明没有副作用。
 
 ```javascript
 // webpack.config.js
@@ -70,7 +70,7 @@ module.exports = {
 }
 ```
 
-打包可以看到，那些没有用到的模块没有被打包进来。
+打包后可以看到，那些没有用到的模块是没有被打包到 `bundle` 的。
 
 这里设置了两个地方：
 
