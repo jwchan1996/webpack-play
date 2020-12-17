@@ -105,7 +105,7 @@ yarn add terser-webpack-plugin --dev
 ```
 
 ```diff
-// webpack.config.js
+  // webpack.config.js
   const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 + const TerserWebpackPlugin = require('terser-webpack-plugin')
 
