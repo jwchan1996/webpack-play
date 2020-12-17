@@ -1,6 +1,6 @@
 # 学会 webpack 从零到一系列
 
-使用 `webpack 5` 作为实践，由于部分特性改动以及周边工具库更新等问题需要采坑。webpack 周边工具库更新速度也很快，遇到报错需要去官网查看最新用法的改动。
+使用 `webpack 5` 作为实践，由于部分特性改动以及周边工具库更新等问题需要采坑。`webpack` 周边工具库更新速度也很快，遇到报错需要去官网查看最新用法的改动。
 
 ## 系列文章
 
@@ -39,10 +39,15 @@
 
 `webpack 5` 默认打包生成的组织代码中包含了现代化浏览器所支持的 `const` 与箭头函数，而默认的 `target: 'web'` 属性在 `webpack 4` 下转换组织代码格式为 `es5`，如果需要 `webpack 5` 打包输出的组织代码也为 `es5`，需要配置 `target` 属性值为 `es5`。
 
-```javascript
-{
-  target: 'es5'
-}
+```diff
+  // webpack.config.js
+  module.exports = {
+    ...
++   {
++     target: 'es5'
++   },
+    ...
+  }
 ```
 
 ![image.png](https://s3.ax1x.com/2020/12/05/DqW7c9.png)
