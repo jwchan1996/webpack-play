@@ -2,11 +2,11 @@
 
 > 写在前面
 
-**注意**：webpack 5 对 devtool 属性值更为严格，规定了一定的顺序。
+**注意**：`webpack 5` 对 `devtool` 属性值更为严格，属性值名称规定了一定的顺序。
 
 ![image.png](https://s3.ax1x.com/2020/12/11/rAMA4e.png)
 
-下面有些内容是基于 webpack 4.x 配置的，如果有关于 webpack 5 具体改动而出现的报错，需要我们自己查看官网文档去做对应的改动。
+下面有些内容是基于 `webpack 4.x` 配置的，如果有关于 `webpack 5` 具体改动而出现的报错，需要我们自己查看官网文档去做对应的改动。
 
 ## 什么是 Source Map
 
@@ -107,7 +107,7 @@ serve dist
 - hidden-source-map
 - nosources-source-map
 
-**注意**：webpack 5 对 devtool 属性值更为严格，规定了一定的顺序。
+**注意**：`webpack 5` 对 `devtool` 属性值更为严格，属性值名称规定了一定的顺序。
 
 ![image.png](https://s3.ax1x.com/2020/12/11/rAMA4e.png)
 
@@ -123,4 +123,4 @@ module -> 是否能够得到 Loader 处理之前的源代码
 
 理解不同模式的区别，选择适合的 `Source Map`。开发模式下使用 `cheap-module-eval-source-map`，生产模式下使用 `none`。
 
-> 最新的 webpack 5 对 devtool 格式更严格，webpack 5 开发模式下的 devtool 模式应该是 eval-cheap-module-source-map。
+> 最新的 webpack 5 对 devtool 格式更严格，webpack 5 开发模式下的 devtool 模式使用 eval-cheap-module-source-map 最高效。

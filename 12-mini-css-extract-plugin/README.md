@@ -2,7 +2,7 @@
 
 ## 使用 MiniCssExtractPlugin 提取单个 CSS 文件
 
-`mini-css-extract-plugin` 插件在工作时会自动提取 CSS 到单个文件，通过这个插件可以实现 CSS 文件的按需加载。
+`mini-css-extract-plugin` 插件在工作时会自动提取 `CSS` 到单个文件，通过这个插件可以实现 `CSS` 文件的按需加载。
 
 ```bash
 yarn add mini-css-extract-plugin --dev

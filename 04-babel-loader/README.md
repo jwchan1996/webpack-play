@@ -33,7 +33,7 @@ module.exports = {
 
 其中 `presets` 选项可以预设需要转换的 `js` 代码的目标环境，这里 `@babel/preset-env` 是包含了所有 `ES6` 新特性转换的插件集合，默认会把所有 `ES6` 新特性转换为 `ES5。`
 
-`除此之外，presets` 还可以指定需要兼容的浏览器，这样 `babel-loader` 就会根据预设的 `targets` 转换出兼容浏览器版本的代码。
+除此之外，`presets` 还可以指定需要兼容的浏览器，这样 `babel-loader` 就会根据预设的 `targets` 转换出兼容浏览器版本的代码。
 
 ```javascript
 // webpack.config.js
@@ -66,7 +66,7 @@ module.exports = {
 }
 ```
 
-还可以使用 .babelrc、babel.config.js 等文件配置方式进行配置，具体使用方法参考[官网](https://www.babeljs.cn/docs/7.2.0/configuration)。
+还可以使用 `.babelrc`、`babel.config.js` 等文件配置方式进行配置，具体使用方法参考[官网](https://www.babeljs.cn/docs/7.2.0/configuration)。
 
 配置好后，运行打包命令 `yarn build`，即可在打包结果看到 `ES6` 代码全部被转换为 `ES5` 代码。
 

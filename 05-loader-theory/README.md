@@ -27,7 +27,7 @@ module.exports = source => {
 
 当然，也支持使用 `ESM` 的语法 `export default` 进行导出。
 
-然后配置 `webpack.config.js` 文件对 `md` `文件进行处理，webpack` 支持直接使用符合 `npm` 模块规范的 `js` 文件作为 `Loader。`
+然后配置 `webpack.config.js` 文件对 `md` `文件进行处理，webpack` 支持直接使用符合 `npm` 模块规范的 `js` 文件作为 `Loader`。
 
 ```javascript
 const path = require('path')
@@ -85,7 +85,7 @@ module.exports = source => {
 
 ### 配合其他 Loader 工作的 Loader
 
-将 `markdown-loader` 作为中间加载器，返回处理好的 `html` 字符串，交给下一个 `loader` ，也就是 `html-loader` 进行处理。
+将 `markdown-loader` 作为中间加载器，返回处理好的 `html` 字符串，交给下一个 `loader`，也就是 `html-loader` 进行处理。
 
 ```javascript
 // markdown-loader.js

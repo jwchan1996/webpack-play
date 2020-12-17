@@ -41,7 +41,7 @@ module.exports = {
 
 这种硬编码方式有两个问题。一是我们发布项目时要同时发布 `index.html` 和 `dist` 目录的打包结果，这样相对麻烦一些，而且上线时还要确保 `html` 中 `script` 标签引用的路径是正确的。二是如果我们输出的目录或输出的文件名改变了的话，也就是打包配置发生了变化，`index.html` 中的 `script` 标签引用的路径也就需要我们手动地修改。
 
-解决上面问题的最好办法就是通过 `webpack` 自动去生成 `html` 文件，也就是让 `html` 也去参与 `webpack` `的构建过程。在构建过程中，webpack` 知道生成了多少个 `bundle`，会自动地将这些打包生成的 `bundle` 添加到页面当中。这样一方面 `html` 会输出到了 `dist` 目录，只要将 `dist` 目录发布出去即可。另一方面 `html` 中对于 `bundle` 的引用是动态地注入进来的，不需要手动硬编码，可以确保路径的引用是正常的。
+解决上面问题的最好办法就是通过 `webpack` 自动去生成 `html` 文件，也就是让 `html` 也去参与 `webpack` 的构建过程。在构建过程中，`webpack` 知道生成了多少个 `bundle`，会自动地将这些打包生成的 `bundle` 添加到页面当中。这样一方面 `html` 会输出到了 `dist` 目录，只要将 `dist` 目录发布出去即可。另一方面 `html` 中对于 `bundle` 的引用是动态地注入进来的，不需要手动硬编码，可以确保路径的引用是正常的。
 
 具体的实现需要借助第三方插件 `html-webpack-plugin` 来完成。
 
@@ -215,4 +215,4 @@ plugins: [
 ]
 ```
 
-> webpack 提供的 ProgressPlugin 插件可以实时输出 webpack 的打包进度，用法是 new webpack.ProgressPlugin()
+> 补充：webpack 提供的 ProgressPlugin 插件可以实时输出 webpack 的打包进度，用法是 new webpack.ProgressPlugin()

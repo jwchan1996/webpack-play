@@ -109,13 +109,13 @@ module.exports = {
 - 遵循 `ES Modules` 标准的 `import` 声明
 - 遵循 `CommonJS` 标准的 `require` 函数
 
-对于 `ES Modules` `的默认导出，require` 导入的时候需要调用 `default` 属性去获取
+对于 `ES Modules` 的默认导出，`require` 导入的时候需要调用 `default` 属性去获取
 
 - 遵循 `AMD` 标准的 `define` 函数和 `requrie` 函数
 
 除非必要的情况，不应该在同一项目中混合使用多种标准，防止维护困难。
 
-除了 js 代码当中的这三种方式以外，还有一些独立的加载器在工作时也会处理加载资源中一些导入的模块，即 `Loader` 加载的非 `JavaScript` 也会触发资源加载。
+除了 `js` 代码当中的这三种方式以外，还有一些独立的加载器在工作时也会处理加载资源中一些导入的模块，即 `Loader` 加载的非 `JavaScript` 也会触发资源加载。
 
 比如 `css-loader` 在加载 `css` 样式文件时，样式代码中的 `@import` 指令和 `url` 函数也会触发相关资源的加载，`html-loader` 在加载 `html` 代码中图片标签的 `src` 属性也会触发资源的加载。
 

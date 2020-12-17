@@ -28,7 +28,7 @@ yarn webpack --watch
 browser-sync dist --files "**/*"
 ```
 
-**注意**：以上使用 `webpack-cli` `watch` 实现自动构建以及使用 `browser-sync` 实现自动刷新的方式也有弊端。一是操作上麻烦，需要同时使用两个工具；二是开发效率降低，`webpack` 会不断的将文件写入磁盘，然后 `browser-sync` 从磁盘读出来，一次过程需要两次磁盘读写操作。
+**注意**：以上使用 `webpack-cli`、`watch` 实现自动构建以及使用 `browser-sync` 实现自动刷新的方式也有弊端。一是操作上麻烦，需要同时使用两个工具；二是开发效率降低，`webpack` 会不断的将文件写入磁盘，然后 `browser-sync` 从磁盘读出来，一次过程需要两次磁盘读写操作。
 
 还需要更高效的方案，如使用 `webpack-dev-server` 工具。
 

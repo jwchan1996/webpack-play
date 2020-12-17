@@ -61,7 +61,12 @@ module.exports = (env, argv) => {
     config.plugins = [
       ...config.plugins,
       new CleanWebpackPlugin(),
-      new CopyWebpackPlugin(['public'])
+      new CopyWebpackPlugin({
+        patterns: [
+          // 可以配置多个对象，表示拷贝目录文件到另一个目录，默认拷贝到 output.path
+          { from: 'public' }
+        ]
+      })
     ]
   }
 
@@ -92,7 +97,12 @@ module.exports = merge(common, {
   mode: 'production',
   plugins: [
     new CleanWebpackPlugin(),
-    new CopyWebpackPlugin(['public'])
+    new CopyWebpackPlugin({
+      patterns: [
+        // 可以配置多个对象，表示拷贝目录文件到另一个目录，默认拷贝到 output.path
+        { from: 'public' }
+      ]
+    })
   ]
 })
 ```
