@@ -22,6 +22,7 @@
 - [webpack 优化配置之 DefinePlugin](/13-define-plugin/)   
 - [webpack 优化配置之 Tree-shaking](/14-tree-shaking/)   
 - [webpack 优化配置之 sideEffects](/15-side-effects/)   
+- [webpack 优化配置之 Code Splitting 多入口打包](/16-multiple-entry/)   
 
 > 以此仓库记录 webpack 的使用与原理
 
