@@ -13,7 +13,7 @@
 
 下面是一个具有多页面的应用，下面将 `webpack` 的单入口配置为多入口。
 
-```javascript
+```diff
 // webpack.config.js
   const path = require('path')
   const { CleanWebpackPlugin } = require('clean-webpack-plugin')
@@ -77,7 +77,7 @@
 
 那怎么提取公共模块呢？配置如下面所示，打包后会多出个公共模块文件。
 
-```javascript
+```diff
 // webpack.config.js
 ...
 ...
