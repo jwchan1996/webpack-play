@@ -68,26 +68,6 @@ module.exports = {
 
 `webpack` 建议将压缩类的插件放到 `minimizer` 配置数组当中，以便于可以通过 `minimizer` 选项统一控制。
 
-使用 `production` 模式进行打包的时候 `minimizer` 属性会自动开启，压缩功能就会生效。
-
-```bash
-yarn webpack --mode production
-```
-
-以普通模式进行打包，`minimizer` 属性规则不会开启，也就不会进行压缩打包输出了。
-
-```bash
-yarn webpack
-```
-
-一旦配置了 `minimizer` 属性，`webpack` 就会认为我们需要自定义压缩处理，`webpack` 内置的 `js` 压缩就会被覆盖掉，所以我们需要在 `minimizer` 选项中配置 `js` 压缩。
-
-`webpack` 内部使用的 `js` 压缩插件是 `terser-webpack-plugin` 。
-
-```bash
-yarn add terser-webpack-plugin --dev
-```
-
 ```javascript
 // webpack.config.js
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
@@ -104,9 +84,47 @@ module.exports = {
 }
 ```
 
+使用 `production` 模式进行打包的时候 `minimizer` 属性会自动开启，压缩功能就会生效。
+
+```bash
+yarn webpack --mode production
+```
+
+以普通模式进行打包，`minimizer` 属性规则不会开启，也就不会进行压缩打包输出了。
+
+```bash
+yarn webpack
+```
+
+但是，一旦配置了 `minimizer` 属性，`webpack` 就会认为我们需要自定义压缩处理，`webpack` 内置的 `js` 压缩就会被覆盖掉，所以我们需要在 `minimizer` 选项中配置 `js` 压缩。
+
+`webpack` 内部使用的 `js` 压缩插件是 `terser-webpack-plugin` 。
+
+```bash
+yarn add terser-webpack-plugin --dev
+```
+
+```diff
+  // webpack.config.js
+  const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
++ const TerserWebpackPlugin = require('terser-webpack-plugin')
+
+  module.exports = {
+    optimization: {
+      minimizer: [
++       new TerserWebpackPlugin(),
+        new OptimizeCssAssetsWebpackPlugin()
+      ]
+    },
+    plugins: [
+      // new OptimizeCssAssetsWebpackPlugin()
+    ]
+  }
+```
+
 ## 输出文件名 Hash
 
-解决缓存问题，生产模式下，文件名使用 `Hash`。`webpack` 配置当中的文件名 `filename` 都支持 `hash`，有三种方式各不相同。
+为了解决缓存问题，生产模式下，文件名应该使用 `Hash`。`webpack` 配置当中的文件名 `filename` 都支持 `hash`，有三种方式各不相同。
 
 第一种是项目级别的 `hash`，只要文件改动，打包出来的文件 `hash` 名就会变化。
 
