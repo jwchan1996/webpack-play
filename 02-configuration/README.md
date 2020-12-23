@@ -27,7 +27,7 @@ module.exports = {
 ```javascript
 {
   "scripts": {
-    "build": "webpack"
+    "build": "yarn webpack"
   }
 }
 ```

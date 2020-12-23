@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "yarn webpack"
   },
   "devDependencies": {
     "css-loader": "^5.0.1",
