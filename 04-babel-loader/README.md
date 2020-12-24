@@ -1,6 +1,6 @@
 # 使用 babel-loader 处理 ES6 代码
 
-`webpack` 默认的 `js` 加载器只是将 `js` 代码模块化，并不包含代码特性的转换，所以对于新的 `ES` 特性，需要使用 `babel-loader` 加载器进行代码转换。因为 `babel-loader` 依赖 `babel` 代码转换的核心模块，所以需要安装 `@babel/core` 以及用于完成具体特性转换的插件集合 `@babel/preset-env`。
+`webpack` 默认的 `js` 加载器只是将 `js` 代码模块化，并不包含代码特性的转换，所以对于新的 `ES` 特性，需要使用 `babel-loader` 加载器进行代码转换。因为 `babel-loader` 依赖 `babel` 代码转换的核心模块，所以需要安装 `@babel/core` 以及用于完成 `ES` 具体特性转换的插件集合 `@babel/preset-env`。
 
 因为严格意义上来说 `babel` 只是 `js` 代码的转换平台，所以我们需要通过 `babel` 使用不同的插件去转换代码当中具体的特性，需要配置 `babel` 所需要的插件。
 
@@ -31,7 +31,7 @@ module.exports = {
 }
 ```
 
-其中 `presets` 选项可以预设需要转换的 `js` 代码的目标环境，这里 `@babel/preset-env` 是包含了所有 `ES6` 新特性转换的插件集合，默认会把所有 `ES6` 新特性转换为 `ES5。`
+其中 `presets` 选项可以预设转换 `js` 新特性的插件，这里 `@babel/preset-env` 是包含了所有 `ES6` 新特性转换的插件集合，默认会把所有 `ES6` 新特性转换为 `ES5。`
 
 除此之外，`presets` 还可以指定需要兼容的浏览器，这样 `babel-loader` 就会根据预设的 `targets` 转换出兼容浏览器版本的代码。
 
