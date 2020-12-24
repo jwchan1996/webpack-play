@@ -11,7 +11,7 @@ module.exports = {
       {
         test: /\.md$/,
         use: [
-          // 'html-loader',
+          // 'html-loader',  // 使用 js 描述 html 模块内容
           './markdown-loader'
         ]
       }
